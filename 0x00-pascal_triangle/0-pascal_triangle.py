@@ -1,19 +1,23 @@
-def Pascal_triangle(n):
-    for line in range(0, n) :
-        for i in range(0, line + 1) :
-            print(binomialCoeff(line, i),
-                " ", end = "")
+#!/usr/bin/python3
+"""
+contains the Pascal's Triangle function
+"""
 
-            def binomialCoeff(n, k) :
-    res = 1
-    if (n <= 0) :
-        return n()
-    for i in range(0 , k) :
-        res = res * (n - i)
-        res = res // (i + 1)
-     
-     return res
 
- n = 7
-Pascal_triangle(n)
+def pascal_triangle(n):
+    """ returns a list of lists of integers representing
+        the Pascal’s triangle of n
+    """
+    triangle = []
+    for i in range(1, n+1):
+        row = []
+        for j in range(i):
+            if j == 0 or j == i-1:
+                n = 1
+                row.append(n)
+            else:
+                n = triangle[i-2][j-1] + triangle[i-2][j]
+                row.append(n)
+        triangle.append(row)
 
+    return triangle
