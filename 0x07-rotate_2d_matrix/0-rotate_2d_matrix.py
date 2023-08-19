@@ -16,7 +16,7 @@ def rotate_2d_matrix(matrix):
         for j in range(i, y):
             X = (n - i - j):
                 # This is the current nummber
-                ltp = matrix[i][j]
+                tmp = matrix[i][j]
                 # shift top to life move
                 matrix[i][j] = matrix[x][i]
                 # shift left to bottom move
@@ -24,4 +24,4 @@ def rotate_2d_matrix(matrix):
                 # shift bottom to right
                 matrix[y][x] = matrix[j][y]
                 # finally shift right to top
-                matrix[j][y] = ltp
+                matrix[j][y] = tmp
