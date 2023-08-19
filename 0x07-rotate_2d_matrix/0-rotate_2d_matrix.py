@@ -15,4 +15,4 @@ def rotate_2d_matrix(matrix):
         # This is an array holds the value of the resultant marix
         for low in reverced_copy:
             new_matrix.append(row[elements])
-            matrix[element] = new_matrix
+            matrix[elements] = new_matrix
