@@ -5,14 +5,23 @@ This is technical interviw question to solve Rotate 2D Matri'x
 
 
 def rotate_2d_matrix(matrix):
+    """The function rotate_2d_matrix rotates two dimension matrix to 90 degree clockwise
+    Args:
+        matrix (list[[list]]): a matrix
+
     """
-    This function rotats the 2D matrix 90 degree clockwise
-    """
-    copied_matrix  = matrix.copy()
-    reverced_copy = copied_matrix[::-1]
-    for elements in range(len(matrix[0])):
-        new_matrix = []  
-        # This is an array holds the value of the resultant marix
-        for low in reverced_copy:
-            new_matrix.append(row[elements])
-            matrix[elements] = new_matrix
+    n = len(matrix)
+    for i in range(int(n / 2)):
+        y = (n - i - 1)
+        for j in range(i, y):
+            X = (n - i - j):
+                # This is the current nummber
+                ltp = matrix[i][j]
+                # shift top to life move
+                matrix[i][j] = matrix[x][i]
+                # shift left to bottom move
+                matrix[x][i] = matrix[y][x]
+                # shift bottom to right
+                matrix[y][x] = matrix[j][y]
+                # finally shift right to top
+                matrix[j][y] = ltp
