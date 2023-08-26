@@ -23,6 +23,6 @@ def makeChange(coins, total):
         result += tmp
         total -= (tmp * coin)
 
-    if total !=0:
+    if total != 0:
         return -1
     return result
