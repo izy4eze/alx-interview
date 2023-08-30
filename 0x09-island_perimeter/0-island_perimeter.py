@@ -4,7 +4,7 @@ Island parimeter
 '''
 
 
-def island_parimeter(grid) -> int:
+def island_perimeter(grid) -> int:
     '''
        returns the parimeter of the island described in grid
        grid is a list of lists of integers
